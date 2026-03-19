@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Information about the application user.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique identifier for the user." },
+        "email": { "type": "string", "format": "email", "description": "The user's email address." },
+        "displayName": { "type": "string", "description": "The user's display name." },
+        "photoURL": { "type": "string", "description": "The user's profile picture URL." },
+        "role": { "type": "string", "enum": ["admin", "user"], "description": "The user's role in the application." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the user profile was created." }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "OperationalTime": {
+      "title": "Operational Time Entry",
+      "description": "A record of operational time for a specific task or team.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "The unique identifier for the entry." },
+        "userId": { "type": "string", "description": "The ID of the user who created the entry." },
+        "teamName": { "type": "string", "description": "The name of the team." },
+        "taskName": { "type": "string", "description": "The name of the task." },
+        "duration": { "type": "number", "description": "The duration of the task in minutes." },
+        "date": { "type": "string", "format": "date", "description": "The date of the operational activity." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the entry was created." }
+      },
+      "required": ["userId", "teamName", "taskName", "duration", "date"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of user profiles."
+    },
+    "/operational_times/{timeId}": {
+      "schema": "OperationalTime",
+      "description": "Collection of operational time records."
+    }
+  }
+}

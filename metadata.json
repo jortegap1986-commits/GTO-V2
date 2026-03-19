@@ -1,0 +1,6 @@
+{
+  "name": "GTO-V2",
+  "description": "GTO: Gestión de Tiempos Operativos. Aplicación para visualizar y analizar la productividad operativa con IA.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

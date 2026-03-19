@@ -1,0 +1,49 @@
+{
+  "name": "gto-v2",
+  "version": "1.2.0",
+  "type": "module",
+  "description": "(GTO) GESTION DE TIEMPOS OPERATIVOS - A web application to visualize and analyze operational productivity, providing AI-powered insights for team performance optimization.",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build",
+    "start": "node server.ts",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.19.35",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "@vitejs/plugin-react": "^5.1.4",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "lightningcss": "^1.32.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^5.4.21"
+  },
+  "dependencies": {
+    "@google/genai": "^1.43.0",
+    "archiver": "^7.0.1",
+    "cookie-session": "^2.1.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "firebase": "^12.10.0",
+    "firebase-admin": "^13.7.0",
+    "googleapis": "^171.4.0",
+    "lucide-react": "^0.576.0",
+    "serverless-http": "^4.0.0",
+    "xlsx": "^0.18.5"
+  }
+}
